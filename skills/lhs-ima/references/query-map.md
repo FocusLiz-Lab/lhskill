@@ -5,7 +5,7 @@ Use this reference when a user explicitly asks `$lhs-ima` to search, cite, summa
 ## Default Knowledge Base
 
 ```text
-LeilaHormozi 知识库
+LeilaHormozi 知识库 | 商业实战
 ```
 
 ## Query Expansion

@@ -1,7 +1,7 @@
 ---
 name: lhs-content
 description: |
-  Leila Hormozi content workflow with default IMA knowledge-base retrieval. Use when the user wants content ideas, hooks, scripts, posts, titles, newsletters, short videos, topic clusters, or to turn LeilaHormozi 知识库 material into leadership, hiring, operations, mindset, or business execution content assets.
+  Leila Hormozi content workflow with default IMA knowledge-base retrieval. Use when the user wants content ideas, hooks, scripts, posts, titles, newsletters, short videos, topic clusters, or to turn LeilaHormozi 知识库 | 商业实战 material into leadership, hiring, operations, mindset, or business execution content assets.
 ---
 
 # lhs-content
@@ -13,7 +13,7 @@ Turn Leila Hormozi source material into content assets while preserving source b
 Default IMA knowledge base:
 
 ```text
-LeilaHormozi 知识库
+LeilaHormozi 知识库 | 商业实战
 ```
 
 Use `ima-skill` for retrieval. Search terms should match the user's platform and topic plus leadership, hiring, CEO, operations, standards, decision, mindset, content, hook, script, 标题, 短视频.

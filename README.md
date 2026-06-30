@@ -29,7 +29,7 @@ $lhs 团队执行力差，帮我按 Leila Hormozi 的管理思路拆一下。
 整套 workflow skills 默认读取这个 IMA 知识库：
 
 ```text
-LeilaHormozi 知识库
+LeilaHormozi 知识库 | 商业实战
 ```
 
 用户不需要在每次提问时输入知识库名称。如果想使用其他 IMA 知识库，在问题里直接写知识库名称即可。

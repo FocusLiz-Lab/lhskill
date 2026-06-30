@@ -1,7 +1,7 @@
 ---
 name: lhs-leadership
 description: |
-  Leila Hormozi leadership workflow with default IMA knowledge-base retrieval. Use when the user asks about leadership, management, culture, expectations, feedback, trust, accountability, hard conversations, standards, managing A-players, or applying LeilaHormozi 知识库 to team leadership.
+  Leila Hormozi leadership workflow with default IMA knowledge-base retrieval. Use when the user asks about leadership, management, culture, expectations, feedback, trust, accountability, hard conversations, standards, managing A-players, or applying LeilaHormozi 知识库 | 商业实战 to team leadership.
 ---
 
 # lhs-leadership
@@ -13,7 +13,7 @@ Help the user translate Leila Hormozi leadership material into clear standards, 
 Default IMA knowledge base:
 
 ```text
-LeilaHormozi 知识库
+LeilaHormozi 知识库 | 商业实战
 ```
 
 Use `ima-skill` for retrieval. Do not expose internal IMA IDs.

@@ -1,7 +1,7 @@
 ---
 name: lhs-roadmap
 description: |
-  Leila Hormozi roadmap workflow with default IMA knowledge-base retrieval. Use when the user needs a 7-day, 30-day, 60-day, or 90-day action plan for leadership, hiring, operations, founder execution, decision-making, team accountability, or applying LeilaHormozi 知识库 to a real project.
+  Leila Hormozi roadmap workflow with default IMA knowledge-base retrieval. Use when the user needs a 7-day, 30-day, 60-day, or 90-day action plan for leadership, hiring, operations, founder execution, decision-making, team accountability, or applying LeilaHormozi 知识库 | 商业实战 to a real project.
 ---
 
 # lhs-roadmap
@@ -13,7 +13,7 @@ Build a practical roadmap from the user's current constraint to measurable next 
 Default IMA knowledge base:
 
 ```text
-LeilaHormozi 知识库
+LeilaHormozi 知识库 | 商业实战
 ```
 
 Use `ima-skill` for retrieval. Do not expose internal IMA IDs.

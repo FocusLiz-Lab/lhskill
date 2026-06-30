@@ -1,7 +1,7 @@
 ---
 name: lhs-ops
 description: |
-  Leila Hormozi operations workflow with default IMA knowledge-base retrieval. Use when the user asks about CEO execution, operating cadence, meetings, accountability, priorities, decision-making, systems, delegation, metrics, bottlenecks, or applying LeilaHormozi 知识库 to business operations.
+  Leila Hormozi operations workflow with default IMA knowledge-base retrieval. Use when the user asks about CEO execution, operating cadence, meetings, accountability, priorities, decision-making, systems, delegation, metrics, bottlenecks, or applying LeilaHormozi 知识库 | 商业实战 to business operations.
 ---
 
 # lhs-ops
@@ -13,7 +13,7 @@ Turn Leila Hormozi operating principles into a repeatable execution system.
 Default IMA knowledge base:
 
 ```text
-LeilaHormozi 知识库
+LeilaHormozi 知识库 | 商业实战
 ```
 
 Use `ima-skill` for retrieval. Do not expose internal IMA IDs.

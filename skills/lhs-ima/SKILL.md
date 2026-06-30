@@ -1,7 +1,7 @@
 ---
 name: lhs-ima
 description: |
-  Compatibility entry for IMA retrieval with Leila Hormozi workflows. Use when the user explicitly invokes $lhs-ima or asks to search, read, cite, summarize, or troubleshoot Leila Hormozi materials from IMA. This skill uses the default IMA knowledge base named "LeilaHormozi 知识库".
+  Compatibility entry for IMA retrieval with Leila Hormozi workflows. Use when the user explicitly invokes $lhs-ima or asks to search, read, cite, summarize, or troubleshoot Leila Hormozi materials from IMA. This skill uses the default IMA knowledge base named "LeilaHormozi 知识库 | 商业实战".
 ---
 
 # lhs-ima
@@ -11,7 +11,7 @@ Use this skill as a thin compatibility entry for users who explicitly ask for IM
 Default IMA knowledge base:
 
 ```text
-LeilaHormozi 知识库
+LeilaHormozi 知识库 | 商业实战
 ```
 
 Required dependency:

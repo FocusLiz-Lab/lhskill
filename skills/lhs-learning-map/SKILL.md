@@ -1,7 +1,7 @@
 ---
 name: lhs-learning-map
 description: |
-  Leila Hormozi learning-map workflow with default IMA knowledge-base retrieval. Use when the user asks where to start, what Leila Hormozi materials to study first, how to learn leadership, hiring, CEO operations, decision-making, mindset, or how to turn the LeilaHormozi 知识库 into a study plan, lesson map, or output-driven learning path.
+  Leila Hormozi learning-map workflow with default IMA knowledge-base retrieval. Use when the user asks where to start, what Leila Hormozi materials to study first, how to learn leadership, hiring, CEO operations, decision-making, mindset, or how to turn the LeilaHormozi 知识库 | 商业实战 into a study plan, lesson map, or output-driven learning path.
 ---
 
 # lhs-learning-map
@@ -13,7 +13,7 @@ Turn the Leila Hormozi knowledge base into a focused learning path tied to the u
 Default IMA knowledge base:
 
 ```text
-LeilaHormozi 知识库
+LeilaHormozi 知识库 | 商业实战
 ```
 
 Use `ima-skill` for retrieval before recommending specific materials. Do not expose internal IMA IDs.

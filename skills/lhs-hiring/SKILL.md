@@ -1,7 +1,7 @@
 ---
 name: lhs-hiring
 description: |
-  Leila Hormozi hiring and team workflow with default IMA knowledge-base retrieval. Use when the user asks about hiring, interviewing, A-players, role scorecards, candidate evaluation, onboarding, performance diagnosis, firing decisions, team structure, or LeilaHormozi 知识库 applied to people operations.
+  Leila Hormozi hiring and team workflow with default IMA knowledge-base retrieval. Use when the user asks about hiring, interviewing, A-players, role scorecards, candidate evaluation, onboarding, performance diagnosis, firing decisions, team structure, or LeilaHormozi 知识库 | 商业实战 applied to people operations.
 ---
 
 # lhs-hiring
@@ -13,7 +13,7 @@ Design hiring and team-performance workflows grounded in Leila Hormozi material.
 Default IMA knowledge base:
 
 ```text
-LeilaHormozi 知识库
+LeilaHormozi 知识库 | 商业实战
 ```
 
 Use `ima-skill` for retrieval. Do not expose internal IMA IDs.

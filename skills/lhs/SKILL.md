@@ -1,7 +1,7 @@
 ---
 name: lhs
 description: |
-  Leila Hormozi skill toolbox main router with default IMA knowledge-base grounding. Use when the user asks about Leila Hormozi, CEO leadership, hiring, team standards, operations, decision-making, founder mindset, personal growth, business execution, content ideas, source search, learning paths, or Leila-style diagnosis. By default, use the IMA knowledge base named "LeilaHormozi 知识库". Triggers include $lhs, /lhs, LeilaHormozi, Leila Hormozi, Leila, 领导力, 管理, 招聘, 团队, CEO, 运营, 决策, 创业心态, 学习地图, and IMA 检索.
+  Leila Hormozi skill toolbox main router with default IMA knowledge-base grounding. Use when the user asks about Leila Hormozi, CEO leadership, hiring, team standards, operations, decision-making, founder mindset, personal growth, business execution, content ideas, source search, learning paths, or Leila-style diagnosis. By default, use the IMA knowledge base named "LeilaHormozi 知识库 | 商业实战". Triggers include $lhs, /lhs, LeilaHormozi, Leila Hormozi, Leila, 领导力, 管理, 招聘, 团队, CEO, 运营, 决策, 创业心态, 学习地图, and IMA 检索.
 ---
 
 # lhs
@@ -13,7 +13,7 @@ Act as the main router for the Leila Hormozi skill toolbox. Identify the user's 
 All workflow skills default to:
 
 ```text
-LeilaHormozi 知识库
+LeilaHormozi 知识库 | 商业实战
 ```
 
 Users do not need to mention this knowledge-base name. If they explicitly name another IMA knowledge base, use that name instead.

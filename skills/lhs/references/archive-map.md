@@ -5,7 +5,7 @@ Use this reference only after `$lhs` is loaded and the user needs routing or sou
 ## Default IMA Knowledge Base
 
 ```text
-LeilaHormozi 知识库
+LeilaHormozi 知识库 | 商业实战
 ```
 
 ## Source Areas In The Local Build Folder

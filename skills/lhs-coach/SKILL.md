@@ -1,7 +1,7 @@
 ---
 name: lhs-coach
 description: |
-  Leila Hormozi coaching workflow with default IMA knowledge-base retrieval. Use when the user asks for founder mindset, emotional discipline, confidence, overthinking, patience, identity change, hard conversations, self-management, resilience, or practical decision coaching based on LeilaHormozi 知识库.
+  Leila Hormozi coaching workflow with default IMA knowledge-base retrieval. Use when the user asks for founder mindset, emotional discipline, confidence, overthinking, patience, identity change, hard conversations, self-management, resilience, or practical decision coaching based on LeilaHormozi 知识库 | 商业实战.
 ---
 
 # lhs-coach
@@ -13,7 +13,7 @@ Apply Leila Hormozi themes to a concrete behavior change or decision.
 Default IMA knowledge base:
 
 ```text
-LeilaHormozi 知识库
+LeilaHormozi 知识库 | 商业实战
 ```
 
 Use `ima-skill` for retrieval when making source-grounded claims. Do not expose internal IMA IDs.
