@@ -1,0 +1,4 @@
+interface:
+  display_name: "LHS Ops"
+  short_description: "CEO operating cadence and metrics"
+  default_prompt: "Use $lhs-ops to build a weekly operating rhythm for a team."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "LHS Content"
+  short_description: "Content ideas from Leila-style principles"
+  default_prompt: "Use $lhs-content to create leadership and operations content ideas."

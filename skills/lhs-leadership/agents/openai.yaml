@@ -1,0 +1,4 @@
+interface:
+  display_name: "LHS Leadership"
+  short_description: "Standards, feedback, and accountability"
+  default_prompt: "Use $lhs-leadership to design a feedback conversation and management cadence."

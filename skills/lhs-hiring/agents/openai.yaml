@@ -1,0 +1,4 @@
+interface:
+  display_name: "LHS Hiring"
+  short_description: "Hiring scorecards and team diagnosis"
+  default_prompt: "Use $lhs-hiring to design a role scorecard and interview evidence plan."

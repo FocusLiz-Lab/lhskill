@@ -1,0 +1,4 @@
+interface:
+  display_name: "LHS Router"
+  short_description: "Leila Hormozi workflow router"
+  default_prompt: "Use $lhs to diagnose a leadership, hiring, operations, or founder execution question."

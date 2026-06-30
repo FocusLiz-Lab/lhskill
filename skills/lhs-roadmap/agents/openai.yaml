@@ -1,0 +1,4 @@
+interface:
+  display_name: "LHS Roadmap"
+  short_description: "Action plans for leadership and execution"
+  default_prompt: "Use $lhs-roadmap to turn a team or founder bottleneck into a 30-day plan."

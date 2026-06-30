@@ -1,0 +1,4 @@
+interface:
+  display_name: "LHS Coach"
+  short_description: "Founder mindset and decision coaching"
+  default_prompt: "Use $lhs-coach to convert overthinking into a decision rule and 7-day experiment."

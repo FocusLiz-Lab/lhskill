@@ -1,0 +1,4 @@
+interface:
+  display_name: "LHS Learning Map"
+  short_description: "Study paths for Leila Hormozi materials"
+  default_prompt: "Use $lhs-learning-map to build a study path from the LeilaHormozi knowledge base."

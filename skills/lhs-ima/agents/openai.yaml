@@ -1,0 +1,4 @@
+interface:
+  display_name: "LHS IMA"
+  short_description: "IMA retrieval for Leila Hormozi sources"
+  default_prompt: "Use $lhs-ima to search and summarize LeilaHormozi knowledge-base material."
