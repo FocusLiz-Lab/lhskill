@@ -1,5 +1,22 @@
-# Leila Hormozi 原子库
+# lhs 原子库
 
-此目录存放发布安全的抽象方法论单元，用来支撑 `lhs` 系列 workflow skills。
+- atoms: 4764
+- generated: 2026-07-01 14:49:16
 
-`atoms.jsonl` 只包含抽象后的知识点、适用场景和来源边界说明，不包含 YouTube 文稿、X/Twitter 原文、书籍原文、课程材料、私有文件路径或 IMA 内部 ID。
+## type counts
+
+- anti-pattern: 227
+- case: 2748
+- checklist: 260
+- insight: 92
+- method: 462
+- principle: 975
+
+## top topics
+
+- general: 2586
+- leadership: 1006
+- operations: 590
+- management: 494
+- hiring: 489
+- accountability: 191
