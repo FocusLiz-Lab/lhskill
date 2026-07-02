@@ -26,13 +26,23 @@ If the roadmap task requires external business cases, benchmark projects, commer
 ~/.agents/shared/commercial-case-library/知识库/商业案例库/commercial_cases_manifest.json
 ```
 
-If missing, pause and ask:
+If the shared library is missing, do not ask for confirmation. Automatically ensure the dependency is available:
+
+1. If `$commercial-case-library` is not installed or cannot be loaded, install it with:
 
 ```text
-这个路线图任务需要商业案例库，但本地共享案例库还没有下载。是否现在下载？下载一次后 dkskill、lhskill、openskill 都可以共用。
+npx -y skills add FocusLiz-Lab/commercial-case-library -g --all
 ```
 
-If the user agrees, route to `$commercial-case-library` and run its downloader, then continue. If the user declines, continue with Leila source material only and say no commercial-case retrieval was used.
+2. Run the shared downloader:
+
+```text
+python scripts/download_cases.py
+```
+
+3. Continue the original task after the download succeeds.
+
+Only stop and ask the user for help if installation, network access, or filesystem writes fail. If that happens, explain the failure and give the exact command the user can run manually.
 
 ## Diagnose First
 
@@ -74,4 +84,5 @@ Identify the dominant constraint:
 - Every action must have an owner, output, and review date when the user context allows it.
 - Prefer small tests and operating cadence over motivational advice.
 - Separate Leila-source evidence from your inferred application.
+
 
