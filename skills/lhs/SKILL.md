@@ -43,6 +43,24 @@ API Key 获取：https://ima.qq.com/agent-interface
 | Founder mindset, emotional discipline, self-management | `$lhs-coach` | User needs decision coaching, mindset reframes, or behavior change based on Leila themes. |
 | Explicit IMA search/read/cite/troubleshooting | `$lhs-ima` | User specifically asks to search, read, cite IMA, or debug IMA retrieval. |
 
+## Commercial Case Library Gate
+
+If the user asks for external commercial cases, benchmark examples, business teardowns, monetization examples, operating case studies, 生财有术案例, or asks to "找案例/拆案例/参考案例/对标/商业案例库", use the shared `$commercial-case-library` dependency before answering.
+
+Check for:
+
+```text
+~/.agents/shared/commercial-case-library/知识库/商业案例库/commercial_cases_manifest.json
+```
+
+If missing, ask:
+
+```text
+这个问题需要使用商业案例库，但本地共享案例库还没有下载。是否现在下载？下载一次后 dkskill、lhskill、openskill 都可以共用。
+```
+
+Only after the user agrees, route to `$commercial-case-library` and run its downloader. If the user declines, continue with Leila IMA/source material only and state that no commercial-case retrieval was used.
+
 ## Clarify Once
 
 If the user is vague, ask one question:
@@ -60,3 +78,4 @@ After the answer, route immediately.
 - Do not imitate Leila Hormozi's persona or claim to speak for her.
 - Do not invent quotes, episode titles, dates, revenue numbers, or source claims.
 - Do not publish or repeat long original source passages.
+
