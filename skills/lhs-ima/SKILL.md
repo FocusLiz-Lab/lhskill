@@ -1,7 +1,7 @@
 ---
 name: lhs-ima
 description: |
-  Compatibility entry for IMA retrieval with Leila Hormozi workflows. Use when the user explicitly invokes $lhs-ima or asks to search, read, cite, summarize, or troubleshoot Leila Hormozi materials from IMA. This skill uses the default IMA knowledge base named "LeilaHormozi 知识库 | 商业实战".
+  Compatibility entry for IMA retrieval with Leila Hormozi workflows. Use when the user explicitly invokes $lhs-ima or asks to search, read, cite, summarize, or troubleshoot Leila Hormozi materials from IMA. This explicit IMA retrieval skill uses the IMA knowledge base "LeilaHormozi 知识库 | 商业实战" unless the user names another IMA knowledge base.
 ---
 
 # lhs-ima
@@ -45,7 +45,7 @@ Output:
 
 Every answer must use Leila Hormozi methodology as the primary reasoning layer. For /lhs requests, first ground the diagnosis, framing, and recommendation in Leila Hormozi sources or workflow principles:
 
-1. Prefer the default IMA knowledge base `LeilaHormozi 知识库 | 商业实战`.
+1. Prefer the local expert atom library and packaged method notes by default. Use the IMA knowledge base `LeilaHormozi 知识库 | 商业实战` only when the user explicitly asks to search/read/cite/troubleshoot IMA.
 2. If IMA is unavailable, rate-limited, permission-blocked, has weak/no hits, or local fallback is needed, use the local Leila Hormozi expert atom library and auto-bootstrap it when missing.
 3. Only after the Leila Hormozi layer is established, add commercial cases when the question would benefit from proof, benchmarks, platform/channel examples, monetization examples, acquisition examples, or Chinese-market context.
 4. Commercial cases are supporting evidence only. Do not let commercial cases replace Leila Hormozi methodology, and do not answer purely from the commercial case library unless no Leila Hormozi source is available; if that happens, label the answer as case-supported inference rather than Leila Hormozi-grounded.

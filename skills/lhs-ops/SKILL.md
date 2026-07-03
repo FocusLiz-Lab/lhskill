@@ -1,7 +1,7 @@
 ---
 name: lhs-ops
 description: |
-  Leila Hormozi operations workflow with default IMA knowledge-base retrieval. Use when the user asks about CEO execution, operating cadence, meetings, accountability, priorities, decision-making, systems, delegation, metrics, bottlenecks, or applying LeilaHormozi 知识库 | 商业实战 to business operations.
+  Leila Hormozi operations workflow with local atom-library retrieval; IMA retrieval only when explicitly requested. Use when the user asks about CEO execution, operating cadence, meetings, accountability, priorities, decision-making, systems, delegation, metrics, bottlenecks, or applying LeilaHormozi 知识库 | 商业实战 to business operations.
 ---
 
 # lhs-ops
@@ -85,7 +85,7 @@ Check these failure modes:
 
 Every answer must use Leila Hormozi methodology as the primary reasoning layer. For /lhs requests, first ground the diagnosis, framing, and recommendation in Leila Hormozi sources or workflow principles:
 
-1. Prefer the default IMA knowledge base `LeilaHormozi 知识库 | 商业实战`.
+1. Prefer the local expert atom library and packaged method notes by default. Use the IMA knowledge base `LeilaHormozi 知识库 | 商业实战` only when the user explicitly asks to search/read/cite/troubleshoot IMA.
 2. If IMA is unavailable, rate-limited, permission-blocked, has weak/no hits, or local fallback is needed, use the local Leila Hormozi expert atom library and auto-bootstrap it when missing.
 3. Only after the Leila Hormozi layer is established, add commercial cases when the question would benefit from proof, benchmarks, platform/channel examples, monetization examples, acquisition examples, or Chinese-market context.
 4. Commercial cases are supporting evidence only. Do not let commercial cases replace Leila Hormozi methodology, and do not answer purely from the commercial case library unless no Leila Hormozi source is available; if that happens, label the answer as case-supported inference rather than Leila Hormozi-grounded.

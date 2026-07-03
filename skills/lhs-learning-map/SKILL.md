@@ -1,7 +1,7 @@
 ---
 name: lhs-learning-map
 description: |
-  Leila Hormozi learning-map workflow with default IMA knowledge-base retrieval. Use when the user asks where to start, what Leila Hormozi materials to study first, how to learn leadership, hiring, CEO operations, decision-making, mindset, or how to turn the LeilaHormozi 知识库 | 商业实战 into a study plan, lesson map, or output-driven learning path.
+  Leila Hormozi learning-map workflow with local atom-library retrieval; IMA retrieval only when explicitly requested. Use when the user asks where to start, what Leila Hormozi materials to study first, how to learn leadership, hiring, CEO operations, decision-making, mindset, or how to turn the LeilaHormozi 知识库 | 商业实战 into a study plan, lesson map, or output-driven learning path.
 ---
 
 # lhs-learning-map
@@ -75,7 +75,7 @@ Ask only for missing information:
 
 Every answer must use Leila Hormozi methodology as the primary reasoning layer. For /lhs requests, first ground the diagnosis, framing, and recommendation in Leila Hormozi sources or workflow principles:
 
-1. Prefer the default IMA knowledge base `LeilaHormozi 知识库 | 商业实战`.
+1. Prefer the local expert atom library and packaged method notes by default. Use the IMA knowledge base `LeilaHormozi 知识库 | 商业实战` only when the user explicitly asks to search/read/cite/troubleshoot IMA.
 2. If IMA is unavailable, rate-limited, permission-blocked, has weak/no hits, or local fallback is needed, use the local Leila Hormozi expert atom library and auto-bootstrap it when missing.
 3. Only after the Leila Hormozi layer is established, add commercial cases when the question would benefit from proof, benchmarks, platform/channel examples, monetization examples, acquisition examples, or Chinese-market context.
 4. Commercial cases are supporting evidence only. Do not let commercial cases replace Leila Hormozi methodology, and do not answer purely from the commercial case library unless no Leila Hormozi source is available; if that happens, label the answer as case-supported inference rather than Leila Hormozi-grounded.
