@@ -32,74 +32,75 @@ API Key 获取：https://ima.qq.com/agent-interface
 
 ## 路由表
 
-| User intent | Route to | Use when |
+| 用户意图 | 路由到 | 适用场景 |
 |---|---|---|
-| Learning path, reading order, where to start | `$lhs-learning-map` | User asks how to study Leila's materials or navigate the knowledge base. |
-| 7/30/90-day execution plan | `$lhs-roadmap` | User needs a practical plan for leadership, hiring, operations, or personal execution. |
-| Leadership, management, culture, standards | `$lhs-leadership` | User asks how to lead people, set expectations, give feedback, or build trust. |
-| Hiring, interviewing, A-players, team design | `$lhs-hiring` | User needs a hiring process, interview scorecard, role clarity, or performance diagnosis. |
-| CEO operations, decisions, systems, accountability | `$lhs-ops` | User asks about operating cadence, bottlenecks, prioritization, meetings, metrics, or execution systems. |
-| Content ideas, hooks, scripts, posts | `$lhs-content` | User wants to turn Leila-style principles into content assets. |
-| Founder mindset, emotional discipline, self-management | `$lhs-coach` | User needs decision coaching, mindset reframes, or behavior change based on Leila themes. |
-| Explicit IMA search/read/cite/troubleshooting | `$lhs-ima` | User specifically asks to search, read, cite IMA, or debug IMA retrieval. |
+| 学习路径、阅读顺序、从哪里开始 | `$lhs-learning-map` | 用户想学习 Leila 的材料，或想了解如何使用知识库。 |
+| 7/30/90 天执行计划 | `$lhs-roadmap` | 用户需要领导力、招聘、运营或个人执行方面的实战计划。 |
+| 领导力、管理、文化、标准 | `$lhs-leadership` | 用户想知道如何带人、设定期望、反馈、建立信任或统一标准。 |
+| 招聘、面试、A 级人才、团队设计 | `$lhs-hiring` | 用户需要招聘流程、面试评分表、岗位清晰度或绩效诊断。 |
+| CEO 运营、决策、系统、问责 | `$lhs-ops` | 用户问运营节奏、瓶颈、优先级、会议、指标或执行系统。 |
+| 内容选题、钩子、脚本、帖子 | `$lhs-content` | 用户想把 Leila 风格原则转成内容资产。 |
+| 创始人心态、情绪纪律、自我管理 | `$lhs-coach` | 用户需要决策辅导、心态重构，或基于 Leila 主题做行为改变。 |
+| 明确要求 IMA 检索/阅读/引用/排错 | `$lhs-ima` | 用户明确要求搜索、读取、引用 IMA，或排查 IMA 检索问题。 |
 
-## Commercial Case Library Gate
+## 商业案例库触发规则
 
-If the user asks for external commercial cases, benchmark examples, business teardowns, monetization examples, operating case studies, 生财有术案例, or asks to "找案例/拆案例/参考案例/对标/商业案例库", use the shared `$commercial-case-library` dependency before answering. Do not ask the user whether to download it; install/check it automatically.
+如果用户要求外部商业案例、对标例子、业务拆解、变现例子、运营案例、生财有术案例，或明确说“找案例/拆案例/参考案例/对标/商业案例库”，回答前使用共享 `$commercial-case-library` 依赖。不要询问用户是否下载，直接自动安装/检查。
 
-Check for:
+检查这个文件：
 
 ```text
 ~/.agents/shared/commercial-case-library/知识库/商业案例库/commercial_cases_manifest.json
 ```
 
-If the shared library is missing, do not ask for confirmation. Automatically ensure the dependency is available:
+如果共享库缺失，不要询问确认，直接确保依赖可用：
 
-1. If `$commercial-case-library` is not installed or cannot be loaded, install it immediately without asking the user:
+1. 如果 `$commercial-case-library` 未安装或无法加载，立即安装：
 
 ```text
 npx -y skills add FocusLiz-Lab/commercial-case-library -g --all
 ```
 
-2. Run the shared downloader:
+2. 运行共享下载脚本：
 
 ```text
 python scripts/download_cases.py
 ```
 
-3. Continue the original task after the download succeeds.
+3. 下载成功后继续处理原始任务。
 
-Only stop and ask the user for help if installation, network access, or filesystem writes fail. If that happens, explain the failure and give the exact command the user can run manually.
+只有安装、网络访问或文件写入失败时才停止，并说明失败原因和用户可手动运行的准确命令。
 
-## Clarify Once
+## 只澄清一次
 
-If the user is vague, ask one question:
+如果用户的问题很模糊，只问一个问题：
 
 ```text
 你现在最想处理哪一块：学习地图、行动路线图、领导力、招聘团队、运营系统、内容创作、自我管理，还是从 IMA 资料里找原文？
 ```
 
-After the answer, route immediately.
+收到回答后立即路由。
 
-## Quality Bar
+## 质量标准
 
-- Default to IMA-grounded workflow skills for substantive claims.
-- Distinguish retrieved evidence from framework inference.
-- Do not imitate Leila Hormozi's persona or claim to speak for her.
-- Do not invent quotes, episode titles, dates, revenue numbers, or source claims.
-- Do not publish or repeat long original source passages.
-## Leila Hormozi Methodology First
+- 涉及实质性观点时，默认使用 IMA 依据。
+- 区分已检索证据和框架推断。
+- 不要模仿 Leila Hormozi 的人设，也不要声称代表她发言。
+- 不要编造引用、节目标题、日期、收入数字或来源说法。
+- 不要发布或重复长段原始来源内容。
 
-Every answer must use Leila Hormozi methodology as the primary reasoning layer. For /lhs requests, first ground the diagnosis, framing, and recommendation in Leila Hormozi sources or workflow principles:
+## Leila Hormozi 方法论优先
 
-1. Prefer the default IMA knowledge base `LeilaHormozi 知识库 | 商业实战`.
-2. If IMA is unavailable, rate-limited, permission-blocked, has weak/no hits, or local fallback is needed, use the local Leila Hormozi expert atom library and auto-bootstrap it when missing.
-3. Only after the Leila Hormozi layer is established, add commercial cases when the question would benefit from proof, benchmarks, platform/channel examples, monetization examples, acquisition examples, or Chinese-market context.
-4. Commercial cases are supporting evidence only. Do not let commercial cases replace Leila Hormozi methodology, and do not answer purely from the commercial case library unless no Leila Hormozi source is available; if that happens, label the answer as case-supported inference rather than Leila Hormozi-grounded.
-5. In final answers, keep the distinction clear: Leila Hormozi 方法论 for the core principle and 商业案例支撑 for examples.
+每个回答都必须以 Leila Hormozi 方法论作为主要推理层。对于 `/lhs` 请求，先用 Leila Hormozi 资料或工作流原则建立诊断、框架和建议：
 
-## Dependency Auto-Bootstrap
+1. 优先使用默认 IMA 知识库 `LeilaHormozi 知识库 | 商业实战`。
+2. 如果 IMA 不可用、限流、权限受阻、命中弱/无命中，或需要本地兜底，使用本地 Leila Hormozi 专家原子库；缺失时自动补全。
+3. 只有在 Leila Hormozi 方法论层建立之后，才在需要证明、对标、平台/渠道例子、变现例子、获客例子或中文市场语境时加入商业案例。
+4. 商业案例只能作为支撑证据。不要让商业案例替代 Leila Hormozi 方法论；除非完全没有 Leila Hormozi 来源，否则不要纯用商业案例库回答。如果发生这种情况，要标注为“案例支撑推断”，而不是“Leila Hormozi 依据”。
+5. 最终回答中保持区分：核心原则用 `Leila Hormozi 方法论`，例子用 `商业案例支撑`。
 
-If IMA is unavailable, rate-limited, permission-blocked, has weak/no hits, or the user explicitly wants local/offline retrieval, ensure the local Leila Hormozi expert atom library exists before answering. GitHub installs should include it when bundled; also check ~/.agents/skills/lhs/知识库/原子库/atoms.jsonl and ~/.agents/skills/lhs-download-atoms/知识库/原子库/atoms.jsonl. If both are missing, treat this as a light/partial install and call $lhs-download-atoms or run python tools/download_full_atoms.py from the installed lhs-download-atoms skill directory. Do not ask the user whether to download; do it automatically when local fallback is required.
+## 依赖自动补全
 
-If the request involves acquisition, traffic, channel choice, platform choice, Xiaohongshu/小红书, WeChat Official Account/公众号, private domain/私域, conversion, lead generation, product launch, business examples, benchmark projects, case studies, monetization examples, 生财有术案例, or any answer would benefit from case evidence, use $commercial-case-library automatically before answering. Do not ask the user whether to download it.
+如果 IMA 不可用、限流、权限受阻、命中弱/无命中，或用户明确要求本地/离线检索，回答前要确保本地 Leila Hormozi 专家原子库存在。GitHub 安装的完整包通常会包含它；同时检查 `~/.agents/skills/lhs/知识库/原子库/atoms.jsonl` 和 `~/.agents/skills/lhs-download-atoms/知识库/原子库/atoms.jsonl`。如果两者都缺失，把它视为轻量/不完整安装，并调用 `$lhs-download-atoms`，或在已安装的 `lhs-download-atoms` skill 目录运行 `python tools/download_full_atoms.py`。不要询问用户是否下载；需要本地兜底时自动执行。
+
+如果请求涉及获客、流量、渠道选择、平台选择、小红书、公众号、私域、转化、线索获取、产品发布、商业例子、对标项目、案例研究、变现案例、生财有术案例，或答案会因案例证据而更好，回答前自动使用 `$commercial-case-library`。不要询问用户是否下载。
