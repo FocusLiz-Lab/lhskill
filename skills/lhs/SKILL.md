@@ -4,6 +4,17 @@ description: |
   Leila Hormozi 领导力与商业执行 Skill 工具箱主入口。用于 CEO 领导力、招聘、团队标准、运营、决策、创始人心态、个人成长、商业执行、内容选题、资料检索、学习路径和 Leila 风格诊断。普通问题默认使用本地专家原子库和 Skill 知识包；只有用户主动调用 $lhs-ima 或明确要求 IMA 检索/引用/排错时，才检索 IMA 知识库「LeilaHormozi 知识库 | 商业实战」。触发词包括 $lhs、/lhs、Leila Hormozi、领导力、管理、招聘、团队、CEO、运营、决策、创业心态、学习地图和 IMA 检索。
 ---
 
+## 手动更新路由
+
+用户明确要求“更新 skill / 检查更新 / 同步最新原子库”时，先执行此路由。使用当前 SKILL.md 所在目录解析脚本绝对路径：
+
+```text
+python "{skillDir}/tools/update_skill.py"
+```
+
+只检查时加 `--check`。脚本从 GitHub main 的固定提交同步本仓库整套 skill 和原子资料，覆盖前备份，写入失败回滚；不需要 Git 或 GitHub 登录。根据脚本实际结果报告当前提交、更新状态与失败原因。普通业务问题不自动更新。更新后重新读取相关 SKILL.md。
+
+
 # lhs Leila Hormozi 商业执行工具箱
 
 这是 Leila Hormozi 领导力与商业执行工具箱的主入口。先判断用户意图，再路由到最相关的 workflow skill；如果上下文足够，直接在同一回答中完成对应工作流。
